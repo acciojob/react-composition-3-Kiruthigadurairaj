@@ -1,1 +1,42 @@
-
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Tooltip Text Styling */
+  .tooltiptext {
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: absolute;
+    background-color: rgb(241, 18, 18);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: max-content;
+    max-width: 200px;
+    
+    bottom: 125%;  /* Position above */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* Small offset */
+    white-space: nowrap;
+  }
+  
+  /* Show Tooltip on Hover */
+  .tooltip:hover .tooltiptext {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0px);
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    gap: 20px;
+  }
